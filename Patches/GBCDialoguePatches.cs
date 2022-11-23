@@ -68,10 +68,4 @@ internal static class GBCDialoguePatches
         newPortrait.SetActive(false);
         return newPortrait;
     }
-
-    internal static DialogueSpeaker NewSpeaker(DialogueSpeaker.Character character)
-    {
-        DialogueSpeaker speaker = new DialogueSpeaker() { characterId = character } ;
-        return speaker;
-    }
 }
