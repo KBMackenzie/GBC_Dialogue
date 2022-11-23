@@ -19,8 +19,7 @@ internal static class GBCDialoguePatches
     [HarmonyPostfix]
     private static void ChangeSprite()
     {
-        if (CharactersToLoad.Count == 0 || 
-            SceneManager.GetActiveScene().name != "GBC_CardBattle") return;
+        if (CharactersToLoad.Count == 0 || SceneManager.GetActiveScene().name != "GBC_CardBattle") return;
 
         Transform portraitPanel = GameObject.Find("DialogueHandler")
                                     .transform
