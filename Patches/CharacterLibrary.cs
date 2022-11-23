@@ -1,7 +1,6 @@
 ﻿using GBC;
 using InscryptionAPI.Guid;
 using System.Collections.Generic;
-using UnityEngine.Rendering;
 
 namespace GBC_Dialogue.Patches
 {
