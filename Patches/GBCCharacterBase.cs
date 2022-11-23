@@ -13,7 +13,7 @@ public class GBCCharacterBase
     public List<DialoguePortrait.EmotionSprite> EmotionSprites = new();
     public string Id => $"{Guid}_{Name}";
 
-    public GBCCharacterBase(string guid, string name, Sprite? sprite = null)
+    internal GBCCharacterBase(string guid, string name, Sprite? sprite = null)
     {
         Guid = guid;
         Name = name;
