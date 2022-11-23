@@ -38,14 +38,14 @@ internal static class GBCDialoguePatches
             CreateDialoguePortrait(in pseudoPrefab, in portraitPanel, character, in box);
         }
 
-        GameObject speakers = GameObject.Find("ScrybeSpeakers");
-        var x = speakers.GetComponent<InBattleDialogueSpeakers>();
+        GameObject scrybeSpeakers = GameObject.Find("ScrybeSpeakers");
+        var inBattle = scrybeSpeakers.GetComponent<InBattleDialogueSpeakers>();
 
         foreach(GBCCharacterBase character in CharactersToLoad)
         {
-            var y = speakers.AddComponent<DialogueSpeaker>();
-            y.characterId = CharacterLibrary.Get(character.Id);
-            x.speakers.Add(y);
+            DialogueSpeaker speaker = scrybeSpeakers.AddComponent<DialogueSpeaker>();
+            speaker.characterId = CharacterLibrary.Get(character.Id);
+            inBattle.speakers.Add(speaker);
         }
     }
 
