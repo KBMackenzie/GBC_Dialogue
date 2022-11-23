@@ -9,14 +9,14 @@ namespace GBC_Dialogue.Patches
     {
         private static Dictionary<string, DialogueSpeaker.Character> Characters = new();
 
-        private static string Guid = Plugin.PluginGuid;
+        private static string APIGuid = Plugin.PluginGuid;
 
         public static DialogueSpeaker.Character Add(GBCCharacterBase character)
         {
             string id = character.Id;
             if (Characters.ContainsKey(id)) return Characters[id];
 
-            var newCharacter = GuidManager.GetEnumValue<DialogueSpeaker.Character>(Guid, id);
+            var newCharacter = GuidManager.GetEnumValue<DialogueSpeaker.Character>(APIGuid, id);
             Characters.Add(id, newCharacter);
             return newCharacter;
         }
